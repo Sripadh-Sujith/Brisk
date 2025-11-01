@@ -35,7 +35,7 @@ With **Brisk**, you can instantly convert any text into natural-sounding speech,
 
 ## ⚙️ Installation
 Access through web:
-'''bash
+
 https://brisktts.streamlit.app
 
 Clone the repository and install dependencies:
@@ -44,4 +44,5 @@ Clone the repository and install dependencies:
 git clone https://github.com/Sripadh-Sujith/Brisk.git
 cd Brisk
 pip install -r requirements.txt
+
 
