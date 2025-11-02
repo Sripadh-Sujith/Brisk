@@ -1,21 +1,21 @@
 import streamlit as st
-import pyttsx3
+from gtts import gTTS
 
 def gen(data,voice):
-    engine=pyttsx3.init()
-    sounds=engine.getProperty('voices')
-    if voice=='Lisa':
-        engine.setProperty('voice',sounds[1].id)
-    else:
-        engine.setProperty('voice',sounds[0].id)
-
-    engine.save_to_file(data,'Audio.mp3')
     
-    engine.runAndWait()
+    
+    if voice=='Lisa':
+        tts=gTTS(data,'com','en')
+    else:
+        tts=gTTS(data,'com.au','en')
+
+    tts.save('Audio.mp3')
+    
+    
 st.title('🔊Brisk')
 st.markdown('Fast🏃‍♂️ and secure🔒')
-val=st.text_input('Enter something...')
-voices=['Lisa','John']
+val=st.text_area('Enter something...')
+voices=['Lisa','Riya']
 selected = st.selectbox("Choose an voice", voices)
 name=st.text_input('Name for your file',value='Brisk.mp3')
 
